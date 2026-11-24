@@ -45,11 +45,11 @@ jobs:
           echo "Version de test de l'application" > staging/app.txt
           echo "Deploiement STAGING termine avec succes"
 
-        - name: Sauvegarder la version staging
-          uses: actions/upload-artifact@v4
-          with:
-            name: application-staging
-            path: staging/
+      - name: Sauvegarder la version staging
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-staging
+          path: staging/
 
 # ETAPE 3 : DEPLOIEMENT PRODUCTION
   deploy-production:
@@ -65,8 +65,8 @@ jobs:
           echo "Version stable de l'application" > production/app.txt
           echo "Deploiement PRODUCTION termine avec succes"
 
-        - name: Sauvegarder la version production
-          uses: actions/upload-artifact@v4
-          with:
-            name: application-production
-            path: production/
+      - name: Sauvegarder la version production
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-production
+          path: production/
